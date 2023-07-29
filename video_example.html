@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="device-width, initial-scale=1">
+        <style>
+            #backgroundVid {
+                position: absolute;
+                display: block;
+                height: 100vh;
+                width: auto;
+                z-index: -100;
+            }
+                header {
+                    background-color: rgba(44, 111, 255, 0.5);
+                    color: white;
+                }
+        </style>
+    </head>
+
+    <body>
+        <video id="backgroundVid" controls autoplay muted>
+            <source src="https://github.com/rbsteffes/rbsteffes.github.io/raw/main/vinyl-57307(1).mp4" type="video/mp4">
+            Your browser does not support the video option.
+        </video>
+        <picture>
+            <source srcset="big.jpg" height="1200px" width="800px" media="screen and (min-width:1200px)" />
+            <source srcset="small.jpg" height="100px" width="100px" media="screen and (min-width:100px)" />
+        </picture>
+        <header>
+            <h1> Hello everyone!</h1>
+        </header>
+    </body>
+</html>

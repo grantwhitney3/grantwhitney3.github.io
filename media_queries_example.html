@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Example for responsive design</title>
+        <style>
+             .menu_list, .menu_choice {
+                margin:0px;
+                padding:0px;
+                display: flex;
+                flex-direction: column;
+
+            } 
+
+            .menu_choice {
+                border-style: outset;
+                margin: .5em;
+                text-align: center; 
+                
+            }
+
+            .menu_choice a {
+                color:black;
+                background-color: lightgrey;
+                text-decoration: none;
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+            }
+
+            #LogoPicture{
+                width:10vw;
+                height:10vh;
+                background-image: url("images/someimage.png");
+            }
+
+            /* Screens of 480px or MORE */
+            @media screen and (min-width: 480px) {
+                
+                .menu_list {
+                    flex-direction: row;
+                }
+            } 
+
+            @media screen and (max-width:479px) {
+                ul {background-color:red;}
+            }
+
+            @media screen and (min-width:481px) and (max-width:720px) {
+                #LogoPicture {
+                    background-image: url("images/someimage_small.png");
+                }
+
+                ul {background-color:green;}
+            }
+
+
+
+            @media screen and (min-width:721px) {
+                ul {background-color:blue;}
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div id="LogoPicture"></div>
+        </header>
+        <nav class="menu">
+            <ul class="menu_list">
+                <li class="menu_choice"><a href="robot.html">See my robot</a></li>
+                <li class="menu_choice"><a href="CSSPosition.html">CSS Position Examples</a></li>
+                <li class="menu_choice"><a href="form.html">Form Example</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>
