@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+
+       function printHello() {
+            let myArray = ['Turds', 2, true, 69.420, 'sup doods'];
+            for (let i = 0; i < myArray.length; i++) {
+                document.write(myArray[i] + '<br>');
+            }
+            lastElement = myArray.pop();
+            myArray = myArray.join(' ');
+            document.write(myArray + '<br>');
+            document.write(lastElement);
+
+       }
+    </script>
+</head>
+
+<body>
+<button onclick="printHello()">Click me to say something!</button>
+</body>
+
+</html>

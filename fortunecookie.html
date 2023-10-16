@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+         /*
+        document.write("Hello, turds!");
+        alert("Hello, turds!");
+        console.log("Hello, turds2!");
+        */
+       function printFortune() {
+            var myArray = new Array("buy more fortune cookies", "time for a change", "something fishy is underfoot", "confuscious say: I cant spell confushus", "so fortunate");
+            // for (let count = 0; count < myArray.length; count++)
+            //{document.write(myArray[count] + `<br>`);}
+
+            var myIndex = Math.floor(Math.random() * (myArray.length));
+            //document.write(((myArray.length - 1) * 10) + "<br>");
+            //document.write(myIndex + ' ' + myArray[myIndex]);  
+            alert(myArray[myIndex]);   
+        }
+    </script>
+</head>
+
+<body>
+<button onclick="printFortune()">Click me to say something!</button>
+</body>
+
+</html>

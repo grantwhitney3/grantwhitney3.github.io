@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        /*
+       document.write("Hello, turds!");
+       alert("Hello, turds!");
+       console.log("Hello, turds2!");
+       */
+       
+       
+      function createEmail() {
+           /* document.write("Hello, squirrels!"); */
+           var firstName = document.getElementById("firstName").value;
+           var lastName = document.getElementById("lastName").value;
+
+
+           // alert(firstName + ' ' + lastName);
+           thingy = document.getElementById("sometext");
+           thingy.textContent = firstName + lastName;
+           alert(thingy.textContent); 
+           return false;
+      }
+   </script>
+</head>
+
+<body>
+    <form>
+        <label for="firstName">First name:</label>
+        <input type="text" name="firstname" id="firstName" >
+        <label for="lastName">Last name:</label>
+        <input type="text" name="lastname" id="lastName" >
+        <button type="button" onclick="createEmail();">Generate Email address.</button>
+    </form>
+
+    
+    <p id="sometext"> This is some text! </p>
+
+
+
+</body>
+
+</html>

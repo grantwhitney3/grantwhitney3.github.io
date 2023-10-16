@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Loan Calculator Example</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="This is Grant's page for his html class.">
+        <meta name="keywords" content="test,intro,stuff">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <script>
+            var loanAmount = parseInt(prompt("Enter a loan amount:"));
+            var interestRate = parseInt(prompt("Enter an interest rate:"));
+            var paymentAmount = parseInt(prompt("Enter a payment amount:"));
+            
+            var monthlyInterestRate = (interestRate / 100) / 12;
+            var currentBalance = loanAmount;
+
+            var loanDesc = "The loan amount is: "
+            var interestDesc = "The interest rate is: "
+            var paymentDesc = "The payment amount is: "
+            var interestAmntDesc = "The interest amount is: "
+
+            document.write(loanDesc + loanAmount + "<br>");
+            document.write(interestDesc + interestRate + "<br>");
+            document.write(paymentDesc + paymentAmount + "<br>");
+            document.write(interestAmntDesc + interestAmount + "<br>");
+            document.write("The Monthly interest payment is " + monthlyInterestRate + "<br>");
+            document.write("The current balance is " + currentBalance + "<br>");
+
+         
+            while (currentBalance > paymentAmount) {
+                var interestAmount = loanAmount * monthlyInterestRate;
+                if (paymentAmount > interestAmount) {
+                    currentBalance = currentBalance - paymentAmount;
+                    document.write(currentBalance + "<br>");
+                }
+                
+                else {
+                    document.write("You will never pay off this loan.");
+                    break;
+                }
+            }
+
+
+        </script>
+
+        
+        
+    </body>
+
+</html>

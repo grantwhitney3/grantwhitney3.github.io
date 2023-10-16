@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <style>
+            .simonGame {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                height: 100%;
+                width: 100%;
+            }
+
+            .topLeft {
+                background-color: green;
+                flex-grow: 0;
+                flex-shrink: 0;
+                flex-basis: 50%;
+                height: 50%;
+                width: 50%;
+                border-radius: 100% 0% 0% 100% / 100% 100% 0% 0%;
+            }
+            
+            .topRight {
+                background-color: red;
+                flex-grow: 0;
+                flex-shrink: 0;
+                flex-basis: 50%;
+                height: 50%;
+                width: 50%;
+                border-radius: 0% 100% 100% 0% / 0% 100% 0% 100%;
+            }
+            
+            .bottomLeft {
+                background-color: yellow;
+                flex-grow: 0;
+                flex-shrink: 0;
+                flex-basis: 50%;
+                height: 50%;
+                width: 50%;
+                border-radius: 100% 0% 0% 100% / 0% 0% 100% 100%;
+            }
+            
+            .bottomRight {
+                background-color: blue;
+                flex-grow: 0;
+                flex-shrink: 0;
+                flex-basis: 50%;
+                height: 50%;
+                width: 50%;
+                border-radius: 0% 100% 100% 0% / 0% 0% 100% 0%;
+            }
+
+            .flashing {
+                animation-name: buzzFlash;  
+                animation-duration: .1s;
+                animation-iteration-count: 10;
+                animation-direction: alternate;
+            }
+
+            @keyframes buzzFlash {
+                0%{ opacity: 100;}
+                100%{ opacity: 0;}
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <div class="simonGame">
+            <div class="topLeft"></div>
+            <div class="topRight"></div>
+            <div class="bottomLeft"></div>
+            <div class="bottomRight"></div>
+        </div>
+        <script src="js/simon.js"></script>
+    </body>
+</html>

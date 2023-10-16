@@ -8,10 +8,20 @@
 
         <style>
             #robot_head {
-                height: 5em;
-                width: 5em;
-                background-color: silver;
+                height: 100px;
+                width: 100px;
+                background-color: darkgrey;
                 justify-content: center;
+            }
+
+            #robot_body {
+                height:10em;
+                width:10em;
+                background-color:silver;
+            }
+
+            robot_torso {
+                
             }
 
             #robot_left_arm {
@@ -21,11 +31,7 @@
                 
             }
 
-            #robot_body {
-                height:10em;
-                width:10em;
-                background-color:silver;
-            }
+
 
             #robot_right_arm {
                 height: 8em;
@@ -41,12 +47,16 @@
     </head>
 
     <body>
-        <div id="robot">
+        <section id="robot">
         <div id="robot_head"></div>
-        <div id="robot_left_arm"></div>
-        <div id="robot_body"></div>
-        <div id="robot_right_arm"></div>
-        </div>
+        
+        <section id="robot_body">
+            <div id="robot_left_arm"></div>
+            <div id="robot_torso"></div>
+            <div id="robot_right_arm"></div>
+        </section>
+        
+        </section>
 
     </body>
 </html>
